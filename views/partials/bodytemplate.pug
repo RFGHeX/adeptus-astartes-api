@@ -1,0 +1,81 @@
+body
+  h2 Welcome to the League of Legends API
+  div(class="mainBoi")
+    div(class="leftDocs")
+      div(class="leftTabs selected" id="getAll" onclick="selected('getAll')")
+        span GET
+        span /lol
+      div(class="leftTabs" id="getChampion" onclick="selected('getChampion')")
+        span GET
+        span /lol/{champion}
+      div(class="leftTabs" id="getRegion" onclick="selected('getRegion')")
+        span GET
+        span /lol/{region}
+      div(class="leftTabs" id="getRole" onclick="selected('getRole')")
+        span GET
+        span /lol/{role}
+      div(class="leftTabs" id="postChampion" onclick="selected('postChampion')")
+        span POST
+        span /lol
+      div(class="leftTabs" id="patchChampion" onclick="selected('patchChampion')")
+        span PATCH
+        span /lol/{champion}
+    div(class="rightDocs")
+      div(class="rightTabs" id="getAll")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns a list of everything.
+      div(class="rightTabs hidden" id="getChampion")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/{champion}
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested champion.
+      div(class="rightTabs hidden" id="getRegion")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/{region}
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested region.
+      div(class="rightTabs hidden" id="getRole")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/{role}
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested role.
+      div(class="rightTabs hidden" id="postChampion")
+        h3 Method
+        div POST
+        h3 Route
+        div localhost:6969/lol
+        h3 Headers
+        div Content-Type application/json
+        h3 Body
+        div { "name": "Leona", "title": "The Radiant Dawn", "region": "Targon", "role": "tank" }
+        h3 Description
+        div Creates a new champion from the data provided in the body.
+      div(class="rightTabs hidden" id="patchChampion")
+        h3 Method
+        div PATCH
+        h3 Route
+        div localhost:6969/lol
+        h3 Headers
+        div Content-Type application/json
+        h3 Body
+        div { "name": "Leona", "title": "The Radiant Dawn", "region": "Targon", "role": "tank" }
+        h3 Description
+        div updates an existing champion from the data provided in the body.
