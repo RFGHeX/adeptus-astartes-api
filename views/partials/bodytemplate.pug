@@ -7,19 +7,19 @@ body
         span /lol
       div(class="leftTabs" id="getChampion" onclick="selected('getChampion')")
         span GET
-        span /lol/{champion}
+        span /lol/champions
       div(class="leftTabs" id="getRegion" onclick="selected('getRegion')")
         span GET
-        span /lol/{region}
+        span /lol/regions
       div(class="leftTabs" id="getRole" onclick="selected('getRole')")
         span GET
-        span /lol/{role}
+        span /lol/roles
       div(class="leftTabs" id="postChampion" onclick="selected('postChampion')")
         span POST
-        span /lol
-      div(class="leftTabs" id="patchChampion" onclick="selected('patchChampion')")
-        span PATCH
-        span /lol/{champion}
+        span /lol/champions
+      div(class="leftTabs" id="deleteChampion" onclick="selected('deleteChampion')")
+        span DELETE
+        span /lol/champions/:championName
     div(class="rightDocs")
       div(class="rightTabs" id="getAll")
         h3 Method
@@ -34,7 +34,7 @@ body
         h3 Method
         div GET
         h3 Route
-        div localhost:6969/lol/{champion}
+        div localhost:6969/lol/champions
         h3 Headers
         div none needed
         h3 Description
@@ -43,7 +43,7 @@ body
         h3 Method
         div GET
         h3 Route
-        div localhost:6969/lol/{region}
+        div localhost:6969/lol/regions
         h3 Headers
         div none needed
         h3 Description
@@ -52,7 +52,7 @@ body
         h3 Method
         div GET
         h3 Route
-        div localhost:6969/lol/{role}
+        div localhost:6969/lol/roles
         h3 Headers
         div none needed
         h3 Description
@@ -65,17 +65,17 @@ body
         h3 Headers
         div Content-Type application/json
         h3 Body
-        div { "name": "Leona", "title": "The Radiant Dawn", "region": "Targon", "role": "tank" }
+        div { "name": "Leona", "region": "Targon", "role": "tank" }
         h3 Description
         div Creates a new champion from the data provided in the body.
-      div(class="rightTabs hidden" id="patchChampion")
+      div(class="rightTabs hidden" id="deleteChampion")
         h3 Method
-        div PATCH
+        div DELETE
         h3 Route
-        div localhost:6969/lol
+        div localhost:6969/lol/champions/:championName
         h3 Headers
         div Content-Type application/json
         h3 Body
-        div { "name": "Leona", "title": "The Radiant Dawn", "region": "Targon", "role": "tank" }
+        div 
         h3 Description
-        div updates an existing champion from the data provided in the body.
+        div deletes an existing champion from the data provided in the body.
