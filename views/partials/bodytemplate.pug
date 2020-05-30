@@ -1,0 +1,81 @@
+body
+  h2 Welcome to the League of Legends API
+  div(class="mainBoi")
+    div(class="leftDocs")
+      div(class="leftTabs selected" id="getAll" onclick="selected('getAll')")
+        span GET
+        span /lol
+      div(class="leftTabs" id="getChampion" onclick="selected('getChampion')")
+        span GET
+        span /lol/champions
+      div(class="leftTabs" id="getRegion" onclick="selected('getRegion')")
+        span GET
+        span /lol/regions
+      div(class="leftTabs" id="getRole" onclick="selected('getRole')")
+        span GET
+        span /lol/roles
+      div(class="leftTabs" id="postChampion" onclick="selected('postChampion')")
+        span POST
+        span /lol/champions
+      div(class="leftTabs" id="deleteChampion" onclick="selected('deleteChampion')")
+        span DELETE
+        span /lol/champions/:championName
+    div(class="rightDocs")
+      div(class="rightTabs" id="getAll")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns a list of everything.
+      div(class="rightTabs hidden" id="getChampion")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/champions
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested champion.
+      div(class="rightTabs hidden" id="getRegion")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/regions
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested region.
+      div(class="rightTabs hidden" id="getRole")
+        h3 Method
+        div GET
+        h3 Route
+        div localhost:6969/lol/roles
+        h3 Headers
+        div none needed
+        h3 Description
+        div Returns the requested role.
+      div(class="rightTabs hidden" id="postChampion")
+        h3 Method
+        div POST
+        h3 Route
+        div localhost:6969/lol
+        h3 Headers
+        div Content-Type application/json
+        h3 Body
+        div { "name": "Leona", "region": "Targon", "role": "tank" }
+        h3 Description
+        div Creates a new champion from the data provided in the body.
+      div(class="rightTabs hidden" id="deleteChampion")
+        h3 Method
+        div DELETE
+        h3 Route
+        div localhost:6969/lol/champions/:championName
+        h3 Headers
+        div Content-Type application/json
+        h3 Body
+        div 
+        h3 Description
+        div deletes an existing champion from the data provided in the body.
